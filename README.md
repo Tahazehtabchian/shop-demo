@@ -7,9 +7,6 @@ A Persian (RTL) clothing-shop demo with a working admin panel. It is a sample
 for pitching to clients, **not** a production shop: there is no server, and all
 data lives in the visitor's browser (`localStorage`).
 
-The shop has **no name yet**. The logo and titles show the descriptor «فروشگاه».
-Change it in one place: [`lib/site.ts`](lib/site.ts).
-
 ## Run
 
 ```bash
@@ -103,10 +100,8 @@ to `useStore()`, so they don't need to change.
 
 یک فروشگاه پوشاک فارسی و راست‌چین همراه با پنل مدیریت کارآمد. این یک **نمونه‌کار** برای ارائه به مشتری است، نه فروشگاه واقعی: هیچ سروری در کار نیست و همه‌ی داده‌ها در مرورگر خود بازدیدکننده (`localStorage`) ذخیره می‌شوند.
 
-**لینک سایت:** https://lustrous-lily-f800b4.netlify.app
+**لینک سایت:** https://lustrous-lily-f800b4.netlify.app  
 **پنل مدیریت:** https://lustrous-lily-f800b4.netlify.app/admin (در نسخه‌ی نمایشی رمز ندارد)
-
-فروشگاه **هنوز اسم ندارد**. لوگو و عنوان‌ها همان واژه‌ی «فروشگاه» را نشان می‌دهند. برای گذاشتن اسم واقعی فقط یک جا را عوض کنید: [`lib/site.ts`](lib/site.ts).
 
 ## اجرا
 
