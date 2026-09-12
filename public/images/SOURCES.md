@@ -1,0 +1,41 @@
+# Image sources
+All photos are from Unsplash under the Unsplash License (free commercial use, no attribution required). They are bundled locally so the site makes no third-party requests.
+
+- `hoodie-1.webp` — https://unsplash.com/photos/1556821840-3a63f95609a7 (images.unsplash.com/photo-1556821840-3a63f95609a7)
+- `hoodie-2.webp` — https://unsplash.com/photos/1564557287817-3785e38ec1f5 (images.unsplash.com/photo-1564557287817-3785e38ec1f5)
+- `oxford-1.webp` — https://unsplash.com/photos/1627686011747-74adda3d2343 (images.unsplash.com/photo-1627686011747-74adda3d2343)
+- `oxford-2.webp` — https://unsplash.com/photos/1621072156002-e2fccdc0b176 (images.unsplash.com/photo-1621072156002-e2fccdc0b176)
+- `tee-1.webp` — https://unsplash.com/photos/1581655353564-df123a1eb820 (images.unsplash.com/photo-1581655353564-df123a1eb820)
+- `tee-2.webp` — https://unsplash.com/photos/1618354691373-d851c5c3a990 (images.unsplash.com/photo-1618354691373-d851c5c3a990)
+- `jeans-1.webp` — https://unsplash.com/photos/1602293589930-45aad59ba3ab (images.unsplash.com/photo-1602293589930-45aad59ba3ab)
+- `jeans-2.webp` — https://unsplash.com/photos/1715758890151-2c15d5d482aa (images.unsplash.com/photo-1715758890151-2c15d5d482aa)
+- `bomber-1.webp` — https://unsplash.com/photos/1591047139829-d91aecb6caea (images.unsplash.com/photo-1591047139829-d91aecb6caea)
+- `bomber-2.webp` — https://unsplash.com/photos/1629353689974-af4d5c70440f (images.unsplash.com/photo-1629353689974-af4d5c70440f)
+- `sweater-1.webp` — https://unsplash.com/photos/1683315565563-f72590773805 (images.unsplash.com/photo-1683315565563-f72590773805)
+- `linen-1.webp` — https://unsplash.com/photos/1614312185032-a96342b80e3d (images.unsplash.com/photo-1614312185032-a96342b80e3d)
+- `skirt-1.webp` — https://unsplash.com/photos/1762343041454-8f1fdd459811 (images.unsplash.com/photo-1762343041454-8f1fdd459811)
+- `skirt-2.webp` — https://unsplash.com/photos/1762342685668-a76f1a57d7d1 (images.unsplash.com/photo-1762342685668-a76f1a57d7d1)
+- `dress-1.webp` — https://unsplash.com/photos/1609357605129-26f69add5d6e (images.unsplash.com/photo-1609357605129-26f69add5d6e)
+- `dress-2.webp` — https://unsplash.com/photos/1616313253719-c46514cddee1 (images.unsplash.com/photo-1616313253719-c46514cddee1)
+- `coat-1.webp` — https://unsplash.com/photos/1539533113208-f6df8cc8b543 (images.unsplash.com/photo-1539533113208-f6df8cc8b543)
+- `coat-2.webp` — https://unsplash.com/photos/1618333453296-9e35280fd6b1 (images.unsplash.com/photo-1618333453296-9e35280fd6b1)
+- `runner-1.webp` — https://unsplash.com/photos/1562183241-b937e95585b6 (images.unsplash.com/photo-1562183241-b937e95585b6)
+- `runner-2.webp` — https://unsplash.com/photos/1560769629-975ec94e6a86 (images.unsplash.com/photo-1560769629-975ec94e6a86)
+- `boots-1.webp` — https://unsplash.com/photos/1608256246200-53e635b5b65f (images.unsplash.com/photo-1608256246200-53e635b5b65f)
+- `boots-2.webp` — https://unsplash.com/photos/1605812860427-4024433a70fd (images.unsplash.com/photo-1605812860427-4024433a70fd)
+- `loafers-1.webp` — https://unsplash.com/photos/1777987601447-266e128de448 (images.unsplash.com/photo-1777987601447-266e128de448)
+- `loafers-2.webp` — https://unsplash.com/photos/1760616172899-0681b97a2de3 (images.unsplash.com/photo-1760616172899-0681b97a2de3)
+- `bag-1.webp` — https://unsplash.com/photos/1624687943971-e86af76d57de (images.unsplash.com/photo-1624687943971-e86af76d57de)
+- `bag-2.webp` — https://unsplash.com/photos/1594633313593-bab3825d0caf (images.unsplash.com/photo-1594633313593-bab3825d0caf)
+- `beanie-1.webp` — https://unsplash.com/photos/1618354691792-d1d42acfd860 (images.unsplash.com/photo-1618354691792-d1d42acfd860)
+- `beanie-2.webp` — https://unsplash.com/photos/1576871337632-b9aef4c17ab9 (images.unsplash.com/photo-1576871337632-b9aef4c17ab9)
+- `sunglasses-1.webp` — https://unsplash.com/photos/1612902457652-33aff0a641fa (images.unsplash.com/photo-1612902457652-33aff0a641fa)
+- `belt-2.webp` — https://unsplash.com/photos/1711443982852-b3df5c563448 (images.unsplash.com/photo-1711443982852-b3df5c563448)
+- `hero-a.webp` — https://unsplash.com/photos/1613915617430-8ab0fd7c6baf (images.unsplash.com/photo-1613915617430-8ab0fd7c6baf)
+- `hero-b.webp` — https://unsplash.com/photos/1532453288672-3a27e9be9efd (images.unsplash.com/photo-1532453288672-3a27e9be9efd)
+- `cat-men.webp` — https://unsplash.com/photos/1617114919297-3c8ddb01f599 (images.unsplash.com/photo-1617114919297-3c8ddb01f599)
+- `cat-accessory.webp` — https://unsplash.com/photos/1511556820780-d912e42b4980 (images.unsplash.com/photo-1511556820780-d912e42b4980)
+- `og.jpg` — images.unsplash.com/photo-1532453288672-3a27e9be9efd
+- `plimsoll-1.webp` — https://unsplash.com/photos/1525966222134-fcfa99b8ae77
+- `cat-women.webp` — https://unsplash.com/photos/1580478491436-fd6a937acc9e
+- `cat-shoes.webp` — https://unsplash.com/photos/1595950653106-6c9ebd614d3a
