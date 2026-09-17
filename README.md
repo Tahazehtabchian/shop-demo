@@ -1,7 +1,7 @@
 # Online shop — demo
 
-**Live demo:** https://lustrous-lily-f800b4.netlify.app  
-**Admin panel:** https://lustrous-lily-f800b4.netlify.app/admin (no password in the demo)
+**Live demo:** https://taz-shop-demo.vercel.app  
+**Admin panel:** https://taz-shop-demo.vercel.app/admin (no password in the demo)
 
 A Persian (RTL) clothing-shop demo with a working admin panel. It is a sample
 for pitching to clients, **not** a production shop: there is no server, and all
@@ -100,8 +100,8 @@ to `useStore()`, so they don't need to change.
 
 یک فروشگاه پوشاک فارسی و راست‌چین همراه با پنل مدیریت کارآمد. این یک **نمونه‌کار** برای ارائه به مشتری است، نه فروشگاه واقعی: هیچ سروری در کار نیست و همه‌ی داده‌ها در مرورگر خود بازدیدکننده (`localStorage`) ذخیره می‌شوند.
 
-**لینک سایت:** https://lustrous-lily-f800b4.netlify.app  
-**پنل مدیریت:** https://lustrous-lily-f800b4.netlify.app/admin (در نسخه‌ی نمایشی رمز ندارد)
+**لینک سایت:** https://taz-shop-demo.vercel.app  
+**پنل مدیریت:** https://taz-shop-demo.vercel.app/admin (در نسخه‌ی نمایشی رمز ندارد)
 
 ## اجرا
 

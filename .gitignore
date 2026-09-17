@@ -8,3 +8,6 @@ next-env.d.ts
 
 # Windows shortcut left in the project folder
 *.lnk
+
+.vercel
+.env.local
