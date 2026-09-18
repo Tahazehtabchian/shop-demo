@@ -1,5 +1,5 @@
 /**
- * Catalogue data and the domain types shared by the shop and the admin panel.
+ * Catalogue data and the domain types shared across the shop.
  * Everything here is demo data: products, prices and orders are samples.
  */
 
@@ -64,7 +64,7 @@ export type Product = {
   sizes: string[];
   /** On-hand quantity per variant, keyed `${color}|${size}`. */
   stock: Record<string, number>;
-  /** Bundled paths (`/images/…`) or data URLs for photos uploaded in the admin panel. */
+  /** Bundled paths (`/images/…`). */
   images: string[];
   description: string;
   details: string[];
@@ -464,9 +464,6 @@ export const SEED_PRODUCTS: Product[] = SEEDS.map(({ pattern, ...s }, i) => ({
   stock: stockTable(s.colors, s.sizes, pattern),
   createdAt: EPOCH - i * DAY,
 }));
-
-/** Every bundled product photo, offered as a picker in the admin product editor. */
-export const IMAGE_LIBRARY: string[] = Array.from(new Set(SEED_PRODUCTS.flatMap((p) => p.images)));
 
 /* ─── Seed orders ─────────────────────────────────────────────────────── */
 

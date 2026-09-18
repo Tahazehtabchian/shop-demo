@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useState } from "react";
-import { Heart, LayoutDashboard, Menu, Search, ShoppingBag, X } from "lucide-react";
+import { Heart, Menu, Search, ShoppingBag, X } from "lucide-react";
 import { CATEGORIES } from "@/lib/catalog";
 import { toFa } from "@/lib/fa";
 import { site } from "@/lib/site";
@@ -95,10 +95,6 @@ export function Header() {
           <p className="truncate">
             نسخه‌ی نمایشی فروشگاه — داده‌ها فقط در همین مرورگر ذخیره می‌شوند.
           </p>
-          <Link href="/admin" className="inline-flex shrink-0 items-center gap-1.5 font-semibold text-white hover:underline">
-            <LayoutDashboard className="size-3.5" />
-            پنل مدیریت
-          </Link>
         </div>
       </div>
 

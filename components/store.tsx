@@ -2,8 +2,8 @@
 
 /**
  * The whole demo's state — products, orders, cart and wishlist — lives here
- * and is persisted to localStorage, so an order placed in the shop shows up
- * in the admin panel, survives a refresh, and syncs between open tabs.
+ * and is persisted to localStorage, so an order placed in the shop survives
+ * a refresh and syncs between open tabs.
  *
  * There is no server. Swapping this provider's actions for API calls is the
  * path to the real product; the components only ever talk to `useStore()`.
@@ -13,7 +13,6 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import {
   type ColorKey,
   type Order,
-  type OrderStatus,
   type PaymentMethod,
   type Product,
   SEED_PRODUCTS,
@@ -65,11 +64,6 @@ type StoreValue = {
 
   placeOrder: (input: CheckoutInput) => Order | null;
   findOrder: (code: string) => Order | undefined;
-
-  saveProduct: (product: Product) => boolean;
-  deleteProduct: (id: string) => void;
-  setOrderStatus: (code: string, status: OrderStatus) => void;
-  resetDemo: () => void;
 
   cartOpen: boolean;
   setCartOpen: (open: boolean) => void;
@@ -296,53 +290,6 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     [state.orders],
   );
 
-  const saveProduct = useCallback(
-    (product: Product) => {
-      const next = {
-        ...state,
-        products: state.products.some((p) => p.id === product.id)
-          ? state.products.map((p) => (p.id === product.id ? product : p))
-          : [product, ...state.products],
-      };
-      // Uploaded photos are data URLs; check they fit before committing.
-      if (!writeStorage(next)) {
-        toast("حافظه‌ی مرورگر پر است؛ تصویر کوچک‌تری انتخاب کنید", "error");
-        return false;
-      }
-      skipWrite.current = true;
-      setState(next);
-      return true;
-    },
-    [state, toast],
-  );
-
-  const deleteProduct = useCallback((id: string) => {
-    setState((s) => ({
-      ...s,
-      products: s.products.filter((p) => p.id !== id),
-      cart: s.cart.filter((l) => l.productId !== id),
-      wishlist: s.wishlist.filter((w) => w !== id),
-    }));
-  }, []);
-
-  const setOrderStatus = useCallback((code: string, status: OrderStatus) => {
-    setState((s) => {
-      const order = s.orders.find((o) => o.code === code);
-      if (!order || order.status === status) return s;
-      let products = s.products;
-      // Cancelling returns the items to stock; reviving a cancelled order takes them again.
-      if (status === "cancelled") products = adjustStock(products, order.items, 1);
-      else if (order.status === "cancelled") products = adjustStock(products, order.items, -1);
-      const updated: Order = { ...order, status, history: [...order.history, { status, at: Date.now() }] };
-      return { ...s, products, orders: s.orders.map((o) => (o.code === code ? updated : o)) };
-    });
-  }, []);
-
-  const resetDemo = useCallback(() => {
-    setState(freshState());
-    toast("داده‌های نمایشی به حالت اول برگشت", "info");
-  }, [toast]);
-
   const value = useMemo<StoreValue>(
     () => ({
       ready,
@@ -359,10 +306,6 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       toggleWish,
       placeOrder,
       findOrder,
-      saveProduct,
-      deleteProduct,
-      setOrderStatus,
-      resetDemo,
       cartOpen,
       setCartOpen,
       toasts,
@@ -370,8 +313,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     }),
     [
       ready, state.products, state.orders, state.wishlist, getProduct, cart, cartCount, subtotal, addToCart,
-      setLineQty, removeLine, toggleWish, placeOrder, findOrder, saveProduct, deleteProduct, setOrderStatus,
-      resetDemo, cartOpen, toasts, toast,
+      setLineQty, removeLine, toggleWish, placeOrder, findOrder, cartOpen, toasts, toast,
     ],
   );
 

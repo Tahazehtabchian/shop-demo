@@ -1,11 +1,10 @@
 # Online shop — demo
 
-**Live demo:** https://taz-shop-demo.vercel.app  
-**Admin panel:** https://taz-shop-demo.vercel.app/admin (no password in the demo)
+**Live demo:** https://taz-shop-demo.vercel.app
 
-A Persian (RTL) clothing-shop demo with a working admin panel. It is a sample
-for pitching to clients, **not** a production shop: there is no server, and all
-data lives in the visitor's browser (`localStorage`).
+A Persian (RTL) clothing-shop demo. It is a sample for pitching to clients,
+**not** a production shop: there is no server, and all data lives in the
+visitor's browser (`localStorage`).
 
 ## Run
 
@@ -24,20 +23,8 @@ colour-matched photos and per-variant stock, wishlist, cart drawer with a
 free-shipping progress bar, guest checkout (validation accepts Persian digits),
 a simulated online payment step, order receipt, and order tracking by code.
 
-**Admin panel** (`/admin`, no password in the demo):
-- dashboard with 7-day sales, a 14-day revenue chart, pending orders and low-stock alerts
-- products: add, edit and delete, with discount, «new»/«bestseller» flags, colours,
-  size charts and a stock table per colour × size
-- product photos: pick from the bundled gallery, or upload from the phone
-  (resized in the browser to 800×1000 JPEG)
-- orders: filter by status, search, advance or cancel. Cancelling returns the
-  items to stock.
-
-**Wiring between the two**:
-- An order placed in the shop lowers stock and appears in the panel immediately.
-- A status change in the panel shows on the customer's tracking page.
-- Open tabs stay in sync.
-- «بازنشانی داده‌های نمایشی» in the panel restores the sample data.
+An order placed in the shop lowers stock and stays in `localStorage`, so it
+survives a refresh and syncs between open tabs.
 
 ## "Instagram-friendly, no need to switch off the VPN"
 
@@ -85,7 +72,6 @@ link from an Iranian connection first, or put it behind your own domain.
 | `lib/catalog.ts` | Types, colours, size charts, the 21 seed products, the sample orders |
 | `components/store.tsx` | All state and actions (cart, orders, products), persisted to `localStorage` |
 | `components/shop/*` | Storefront |
-| `components/admin/*` | Admin panel |
 | `public/images/SOURCES.md` | Photo credits (Unsplash License) |
 
 To make this a real shop, replace the actions in `components/store.tsx` with API
@@ -98,10 +84,9 @@ to `useStore()`, so they don't need to change.
 
 # فروشگاه اینترنتی — نسخه‌ی نمایشی
 
-یک فروشگاه پوشاک فارسی و راست‌چین همراه با پنل مدیریت کارآمد. این یک **نمونه‌کار** برای ارائه به مشتری است، نه فروشگاه واقعی: هیچ سروری در کار نیست و همه‌ی داده‌ها در مرورگر خود بازدیدکننده (`localStorage`) ذخیره می‌شوند.
+یک فروشگاه پوشاک فارسی و راست‌چین. این یک **نمونه‌کار** برای ارائه به مشتری است، نه فروشگاه واقعی: هیچ سروری در کار نیست و همه‌ی داده‌ها در مرورگر خود بازدیدکننده (`localStorage`) ذخیره می‌شوند.
 
-**لینک سایت:** https://taz-shop-demo.vercel.app  
-**پنل مدیریت:** https://taz-shop-demo.vercel.app/admin (در نسخه‌ی نمایشی رمز ندارد)
+**لینک سایت:** https://taz-shop-demo.vercel.app
 
 ## اجرا
 
@@ -116,17 +101,7 @@ npm start            # اجرای خروجی روی همین کامپیوتر
 
 **فروشگاه:** صفحه‌ی اصلی، لیست محصولات با فیلتر دسته‌بندی و رنگ و سایز و موجودی و تخفیف، مرتب‌سازی، جست‌وجو (حروف فارسی و عربی را یکسان می‌گیرد، مثلاً «ي» و «ی»)، صفحه‌ی محصول با عکسِ متناسب با رنگ انتخابی و موجودی جداگانه‌ی هر ترکیب رنگ و سایز، لیست علاقه‌مندی‌ها، سبد خرید کشویی با نوار پیشرفت ارسال رایگان، تکمیل خرید بدون ثبت‌نام (اعتبارسنجی، ارقام فارسی را هم قبول می‌کند)، مرحله‌ی شبیه‌سازی‌شده‌ی پرداخت آنلاین، رسید سفارش، و پیگیری سفارش با کد.
 
-**پنل مدیریت** (آدرس `/admin`، در این نسخه بدون رمز):
-- داشبورد با فروش ۷ روز اخیر، نمودار درآمد ۱۴ روز، سفارش‌های در انتظار و هشدار کالاهای رو به اتمام
-- محصولات: افزودن، ویرایش و حذف، همراه با تخفیف، برچسب «جدید» و «پرفروش»، رنگ‌ها، جدول سایز و جدول موجودی به تفکیک رنگ × سایز
-- عکس محصول: انتخاب از گالری آماده یا آپلود از گوشی (در خود مرورگر به ۸۰۰×۱۰۰۰ کوچک می‌شود)
-- سفارش‌ها: فیلتر بر اساس وضعیت، جست‌وجو، تغییر وضعیت یا لغو. با لغو سفارش، کالاها به موجودی برمی‌گردند.
-
-**ارتباط این دو با هم:**
-- سفارشی که در فروشگاه ثبت شود، از موجودی کم می‌کند و بی‌درنگ در پنل دیده می‌شود.
-- تغییر وضعیت در پنل، در صفحه‌ی پیگیری مشتری نمایش داده می‌شود.
-- تب‌های باز با هم هماهنگ می‌مانند.
-- دکمه‌ی «بازنشانی داده‌های نمایشی» در پنل، داده‌های نمونه را برمی‌گرداند.
+سفارشی که در فروشگاه ثبت شود، از موجودی کم می‌کند و در `localStorage` می‌ماند؛ پس با رفرش صفحه از بین نمی‌رود و بین تب‌های باز هماهنگ می‌ماند.
 
 ## «سازگار با اینستاگرام و بدون نیاز به خاموش کردن فیلترشکن»
 
@@ -162,7 +137,6 @@ npm start            # اجرای خروجی روی همین کامپیوتر
 | `lib/catalog.ts` | نوع‌ها، رنگ‌ها، جدول سایزها، ۲۱ محصول اولیه و سفارش‌های نمونه |
 | `components/store.tsx` | تمام وضعیت و عملیات (سبد خرید، سفارش‌ها، محصولات) و ذخیره در `localStorage` |
 | `components/shop/*` | بخش فروشگاه |
-| `components/admin/*` | پنل مدیریت |
 | `public/images/SOURCES.md` | منبع عکس‌ها (مجوز Unsplash) |
 
 برای تبدیل این نمونه به فروشگاه واقعی، کافی است عملیات داخل `components/store.tsx` با درخواست به API جایگزین شود (محصولات، سفارش‌ها، ورود کاربر، درگاه پرداخت، پیامک). بقیه‌ی اجزا فقط با `useStore()` حرف می‌زنند، پس نیازی به تغییرشان نیست.

@@ -102,9 +102,6 @@ export function Footer() {
       <div className="border-t border-line">
         <div className="wrap flex flex-wrap items-center justify-between gap-3 py-5 text-xs text-muted">
           <span>© {year} — نسخه‌ی نمایشی؛ محصولات، قیمت‌ها و سفارش‌ها نمونه هستند.</span>
-          <Link href="/admin" className="hover:text-ink">
-            ورود به پنل مدیریت
-          </Link>
         </div>
       </div>
     </footer>

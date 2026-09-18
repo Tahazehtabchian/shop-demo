@@ -114,11 +114,7 @@ export function OrderView() {
       </div>
 
       <p className="mt-8 rounded-sm bg-accent-soft px-4 py-3 text-center text-xs leading-6 text-accent-dark">
-        نسخه‌ی نمایشی: پرداختی انجام نشده است. این سفارش همین حالا در{" "}
-        <Link href="/admin/orders" className="font-bold underline underline-offset-4">
-          پنل مدیریت
-        </Link>{" "}
-        دیده می‌شود و می‌توانید وضعیتش را از آنجا تغییر دهید.
+        نسخه‌ی نمایشی: پرداختی انجام نشده است.
       </p>
     </div>
   );
